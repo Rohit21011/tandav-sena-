@@ -23,6 +23,7 @@ coverage/
 dist/
 node_modules/
 tmp/
+android/
 temp/
 hooks/
 platforms/
