@@ -1,46 +1,83 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Signup</ion-title>
+
+    <ion-title>Login</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content>
+<ion-content class="container">
+  <span (click)="goBack()"><ion-icon class="backButton"  name="chevron-back-outline"></ion-icon></span>
+  <!-- <div class="login-logo">
+    <img style="border-radius: 25px;" src="assets/img/logo.jpg" alt="Ionic logo">
+  </div> -->
 
-  <div class="signup-logo">
-    <img src="assets/img/appicon.svg" alt="Ionic Logo">
+  <div class="heading">
+    <h4>शिव तांडव सेना</h4>
+    <img src="../../../assets/img/vector-png/flag.png" alt="flag">
+    <p>सकल हिंदू समाज , एक समाज </p>
+    <p>धर्मो रक्षति रक्षितः</p>
+
   </div>
 
-  <form #signupForm="ngForm" novalidate>
-    <ion-list lines="none">
+<div class="background">
+  <h3>Signup</h3>
+  <h5 style="color:black;font-weight: 600;font-size: 17px;line-height: 26px;">Let us know about yourself</h5>
+  <form #loginForm="ngForm" class="form-layout" novalidate>
+    <ion-list>
       <ion-item>
-        <ion-label position="stacked" color="primary">Username</ion-label>
-        <ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+        <ion-label position="stacked" color="primary">Mobile No.</ion-label>
+        <ion-input  name="password" type="password" placeholder="Enter your Mobile No."  required>
+          <ion-icon name="call-outline"></ion-icon>
         </ion-input>
       </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="username.valid || submitted === false" class="ion-padding-start">
-          Username is required
-        </p>
-      </ion-text>
 
-      <ion-item>
-        <ion-label position="stacked" color="primary">Password</ion-label>
-        <ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="password.valid || submitted === false" class="ion-padding-start">
-          Password is required
-        </p>
-      </ion-text>
+    <ion-item lines="none" style="display:flex;color: #FB9145;margin-top: 20px;width:370px;">
+
+      <ion-label style="font-size: 12px;" color="primary">Referral Code:</ion-label>
+      <ion-input label="Outline input" class="Referral" ></ion-input>
+    </ion-item>
+
     </ion-list>
+    <ion-row style="width: 334px;">
+      <ion-col>
+        <ion-button shape="round" color="dark"  class="optButton" type="submit">Get OTP</ion-button>
+        <!-- <ion-button  class="optButton" type="submit"  >Get OTP</ion-button> -->
+      </ion-col>
+      <ion-col style="display: flex;">
+        <ion-input label="Outline input" #otp1 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp2)" class="otpBox" ></ion-input>
+        <ion-input label="Outline input" #otp2 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp3)" class="otpBox" ></ion-input>
+        <ion-input label="Outline input" #otp3 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp4)" class="otpBox" ></ion-input>
+        <ion-input label="Outline input" #otp4 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp5)" class="otpBox" ></ion-input>
+        <ion-input label="Outline input" #otp5 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp6)" class="otpBox" ></ion-input>
 
-    <div class="ion-padding">
-      <ion-button (click)="onSignup(signupForm)" type="submit" expand="block">Create</ion-button>
-    </div>
+      </ion-col>
+    </ion-row>
+
+      <ion-button #otp6 type="submit" class="submit" expand="block">Submit</ion-button>
+      <ion-row class="newUser">
+        <p style="color:black;">Already have account ?  <span (click)="signIn()" style="color:#FF8015">Sign in</span></p>
+      </ion-row>
+
+
+    <!-- <ion-row>
+      <ion-col>
+        <ion-button  type="submit"  expand="block">getOtp</ion-button>
+      </ion-col> -->
+      <!-- <ion-col>
+        <ion-button (click)="onSignup()" color="light" shape="round"  expand="block">Signup</ion-button>
+      </ion-col> -->
+    <!-- </ion-row> -->
   </form>
+</div>
+
+
+
+
+
+
+
 
 </ion-content>

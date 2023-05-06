@@ -5,8 +5,8 @@ import { CheckTutorial } from './providers/check-tutorial.service';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/tutorial',
-    pathMatch: 'full'
+    redirectTo: '/login',
+    pathMatch: 'full',
   },
   {
     path: 'account',
@@ -32,7 +32,19 @@ const routes: Routes = [
     path: 'tutorial',
     loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialModule),
     canLoad: [CheckTutorial]
+  },  {
+    path: 'forget-page',
+    loadChildren: () => import('./pages/forget-page/forget-page.module').then( m => m.ForgetPagePageModule)
+  },
+  {
+    path: 'signup-details',
+    loadChildren: () => import('./pages/signup-details/signup-details.module').then( m => m.SignupDetailsPageModule)
+  },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./change-password/change-password.module').then( m => m.ChangePasswordPageModule)
   }
+
 ];
 
 @NgModule({

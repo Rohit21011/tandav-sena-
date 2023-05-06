@@ -24,7 +24,7 @@ export class SchedulePage implements OnInit {
   groups: any = [];
   confDate: string;
   showSearchbar: boolean;
-
+  speakers:any;
   constructor(
     public alertCtrl: AlertController,
     public confData: ConferenceData,
@@ -38,8 +38,9 @@ export class SchedulePage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.updateSchedule();
-
+    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+      this.speakers = speakers;
+    });
     this.ios = this.config.get('mode') === 'ios';
   }
 
@@ -137,4 +138,6 @@ export class SchedulePage implements OnInit {
     await loading.onWillDismiss();
     fab.close();
   }
+
 }
+

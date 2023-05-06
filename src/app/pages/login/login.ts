@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import { UserData } from '../../providers/user-data';
 
-import { UserOptions } from '../../interfaces/user-options';
+import { UserLoginOptions } from '../../interfaces/user-options';
 
 
 
@@ -14,7 +14,7 @@ import { UserOptions } from '../../interfaces/user-options';
   styleUrls: ['./login.scss'],
 })
 export class LoginPage {
-  login: UserOptions = { username: '', password: '' };
+  login: UserLoginOptions = { username: '', password: '' };
   submitted = false;
 
   constructor(
@@ -33,5 +33,15 @@ export class LoginPage {
 
   onSignup() {
     this.router.navigateByUrl('/signup');
+  }
+  forget(){
+    this.router.navigateByUrl('/signup');
+  }
+  forgetPassword(){
+    this.router.navigateByUrl('/forget-page');
+  }
+  signup(){
+    this.router.navigateByUrl('/signup-details');
+    console.log("jhbfd");
   }
 }

@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -6,20 +6,33 @@
 
     <ion-title>Login</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content>
-  <div class="login-logo">
-    <img src="assets/img/appicon.svg" alt="Ionic logo">
+<ion-content class="container">
+
+
+  <!-- <div class="login-logo">
+    <img style="border-radius: 25px;" src="assets/img/logo.jpg" alt="Ionic logo">
+  </div> -->
+  <div class="heading">
+    <h4>शिव तांडव सेना</h4>
+    <img src="../../../assets/img/vector-png/flag.png" alt="flag">
+    <p>सकल हिंदू समाज , एक समाज </p>
+    <p>धर्मो रक्षति रक्षितः</p>
   </div>
 
-  <form #loginForm="ngForm" novalidate>
+<div class="background">
+  <h3>Login</h3>
+  <form #loginForm="ngForm" class="form-layout" novalidate>
     <ion-list>
       <ion-item>
-        <ion-label position="stacked" color="primary">Username</ion-label>
-        <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+        <ion-label position="stacked" color="primary" >Email</ion-label>
+
+        <ion-input [(ngModel)]="login.username"  name="username" type="text"placeholder="Enter your Mobile No. / E-mail" #username="ngModel" spellcheck="false" autocapitalize="off"
           required>
+          <ion-icon name="mail-open-outline"></ion-icon>
         </ion-input>
+
       </ion-item>
 
       <ion-text color="danger">
@@ -30,9 +43,14 @@
 
       <ion-item>
         <ion-label position="stacked" color="primary">Password</ion-label>
-        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" placeholder="Enter your Password" #password="ngModel" required>
+          <ion-icon name="lock-closed-outline"></ion-icon>
         </ion-input>
       </ion-item>
+      <div class="info">
+        <p  (click)="forget()" >Login with OTP</p>
+        <p (click)="forgetPassword()" >forget password</p>
+      </div>
 
       <ion-text color="danger">
         <p [hidden]="password.valid || submitted === false" class="ion-padding-start">
@@ -40,15 +58,36 @@
         </p>
       </ion-text>
     </ion-list>
-
+<ion-row>
+  <p style="font-size: 12px;margin: 10px auto 15px auto;">सभासद बने ,हिंदू राष्ट्र निर्माण में अपना योगदान दे</p>
+</ion-row>
     <ion-row>
       <ion-col>
-        <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">Login</ion-button>
+        <ion-button (click)="onLogin(loginForm)" type="submit"  expand="block">Sign In</ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button (click)="onSignup()" color="light" expand="block">Signup</ion-button>
-      </ion-col>
+      <!-- <ion-col>
+        <ion-button (click)="onSignup()" color="light" shape="round"  expand="block">Signup</ion-button>
+      </ion-col> -->
     </ion-row>
+    <ion-row class="social-networks">
+      <ion-icon class="social-icons" name="logo-twitter"></ion-icon>
+      <ion-icon class="social-icons" name="logo-linkedin"></ion-icon>
+      <ion-icon class="social-icons" name="logo-facebook"></ion-icon>
+      <ion-icon class="social-icons" name="logo-instagram"></ion-icon>
+      <ion-icon class="social-icons" name="logo-google"></ion-icon>
+    </ion-row>
+
   </form>
+  <ion-row class="newUser">
+    <p style="color: #303030;">New user ? <span (click)="signup()" style="color:#FF8015">Sign up</span></p>
+  </ion-row>
+</div>
+
+
+
+
+
+
+
 
 </ion-content>

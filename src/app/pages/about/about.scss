@@ -1,26 +1,4 @@
-ion-toolbar {
-  position: absolute;
 
-  top: 0;
-  left: 0;
-  right: 0;
-
-  --background: transparent;
-  --color: white;
-}
-
-ion-toolbar ion-button,
-ion-toolbar ion-back-button,
-ion-toolbar ion-menu-button {
-  --color: white;
-}
-
-.about-header {
-  position: relative;
-
-  width: 100%;
-  height: 30%;
-}
 
 .about-header .about-image {
   position: absolute;
@@ -94,4 +72,57 @@ ion-toolbar ion-menu-button {
 
 .ios .about-info h3 {
   font-weight: 700;
+}
+
+
+//new code
+
+.profile-container {
+  padding-top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+}
+
+.profile-info-container {
+  text-align: center;
+}
+
+
+.profile-info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-info-row ion-icon {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #999;
+}
+
+.profile-info-label {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-info-value {
+  font-size: 16px;
+  color: #999;
 }

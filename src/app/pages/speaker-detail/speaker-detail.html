@@ -2,7 +2,7 @@
   <ion-header class="ion-no-border">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="/app/tabs/speakers"></ion-back-button>
+        <ion-back-button defaultHref="/app/tabs/schedule"></ion-back-button>
       </ion-buttons>
       <ion-buttons *ngIf="speaker" slot="end">
         <ion-button (click)="openContact(speaker)">
@@ -21,9 +21,18 @@
   </div>
 
   <div class="ion-padding speaker-detail">
+    <h2>{{speaker?.title}}</h2>
+    <ion-icon name="heart-outline" style="float: right;font-size: 30px;margin-top: -40px;"></ion-icon>
     <p>{{speaker?.about}} Say hello on social media!</p>
 
-    <hr>
+
+
+    <ion-item>
+      <!-- <ion-label>Text input</ion-label> -->
+      <ion-input placeholder="Add comment"></ion-input>
+    </ion-item>
+
+    <h3>Follow us on</h3>
 
     <ion-chip color="twitter" button (click)="openExternalUrl('https://twitter.com/' + speaker.twitter)">
       <ion-icon name="logo-twitter"></ion-icon>

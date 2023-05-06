@@ -20,25 +20,25 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Schedule',
-      url: '/app/tabs/schedule',
-      icon: 'calendar'
-    },
-    {
-      title: 'Speakers',
-      url: '/app/tabs/speakers',
+      title: 'Profile',
+      url: '/app/tabs/about',
       icon: 'people'
     },
     {
-      title: 'Map',
-      url: '/app/tabs/map',
-      icon: 'map'
+      title: 'Events',
+      url: '/app/tabs/schedule',
+      icon: 'calendar'
     },
-    {
-      title: 'About',
-      url: '/app/tabs/about',
-      icon: 'information-circle'
-    }
+    // {
+    //   title: 'Map',
+    //   url: '/app/tabs/map',
+    //   icon: 'map'
+    // },
+    // {
+    //   title: 'About',
+    //   url: '/app/tabs/about',
+    //   icon: 'information-circle'
+    // }
   ];
   loggedIn = false;
   dark = false;

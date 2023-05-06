@@ -5,15 +5,15 @@
     </ion-buttons>
     <ion-segment *ngIf="ios" [(ngModel)]="segment" (ionChange)="updateSchedule()">
       <ion-segment-button value="all">
-        All
+        post
       </ion-segment-button>
       <ion-segment-button value="favorites">
-        Favorites
+        events
       </ion-segment-button>
     </ion-segment>
-    <ion-title *ngIf="!ios && !showSearchbar">Schedule</ion-title>
-    <ion-searchbar *ngIf="showSearchbar" showCancelButton="always" [(ngModel)]="queryText" (ionChange)="updateSchedule()" (ionCancel)="showSearchbar = false" placeholder="Search"></ion-searchbar>
-    <ion-buttons slot="end">
+    <ion-title *ngIf="!ios && !showSearchbar">Posts</ion-title>
+    <!-- <ion-searchbar *ngIf="showSearchbar" showCancelButton="always" [(ngModel)]="queryText" (ionChange)="updateSchedule()" (ionCancel)="showSearchbar = false" placeholder="Search"></ion-searchbar> -->
+    <!-- <ion-buttons slot="end">
       <ion-button *ngIf="!ios && !showSearchbar" (click)="showSearchbar = true">
         <ion-icon slot="icon-only" name="search"></ion-icon>
       </ion-button>
@@ -23,64 +23,79 @@
           <ion-icon slot="icon-only" name="options"></ion-icon>
         </span>
       </ion-button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-toolbar>
   <ion-toolbar *ngIf="!ios">
     <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
       <ion-segment-button value="all">
-        All
+        Post
       </ion-segment-button>
       <ion-segment-button value="favorites">
-        Favorites
+        Events
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Schedule</ion-title>
     </ion-toolbar>
     <ion-toolbar>
       <ion-searchbar [(ngModel)]="queryText" (ionChange)="updateSchedule()" placeholder="Search"></ion-searchbar>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <ion-list #scheduleList [hidden]="shownSessions === 0">
-    <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
-      <ion-item-divider sticky>
-        <ion-label>
-          {{group.time}}
-        </ion-label>
-      </ion-item-divider>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col  size="12" size-md="12" *ngFor="let speaker of speakers">
+        <ion-card>
+          <img alt="Silhouette of mountains" [src]="speaker.profilePic"  routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}"/>
+          <ion-card-header>
+            <ion-card-title>{{speaker.name}}</ion-card-title>
+            <ion-card-subtitle>{{speaker.title}}</ion-card-subtitle>
+            <ion-icon name="heart-outline" style="float: right;font-size: 30px; margin-top: -40px;"></ion-icon>
+          </ion-card-header>
 
-      <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase"
-        [hidden]="session.hide">
-        <ion-item routerLink="/app/tabs/schedule/session/{{session.id}}">
-          <ion-label>
-            <h3>{{session.name}}</h3>
-            <p>
-              {{session.timeStart}} &mdash; {{session.timeEnd}}: {{session.location}}
-            </p>
-          </ion-label>
-        </ion-item>
-        <ion-item-options>
-          <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
-            Favorite
-          </ion-item-option>
-          <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')"
-            *ngIf="segment === 'favorites'">
-            Remove
-          </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
-    </ion-item-group>
-  </ion-list>
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+        <!-- <ion-card class="speaker-card">
+          <ion-card-header>
+            <ion-item detail="false" lines="none" class="speaker-item" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+              <ion-avatar slot="start">
+                <img [src]="speaker.profilePic" [alt]="speaker.name + ' profile picture'">
+              </ion-avatar>
+              <ion-label>
+                <h2>{{speaker.name}}</h2>
+                <p>{{speaker.title}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-card-header>
 
-  <ion-list-header [hidden]="shownSessions > 0">
-    No Sessions Found
-  </ion-list-header>
+          <ion-card-content>
+            <ion-list lines="none">
+              <ion-item *ngFor="let session of speaker.sessions" detail="false" routerLink="/app/tabs/speakers/session/{{session.id}}">
+                <ion-label>
+                  <h3>{{session.name}}</h3>
+                </ion-label>
+              </ion-item>
+
+              <ion-item detail="false" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-label>
+                  <h3>About {{speaker.name}}</h3>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
     <ion-fab-button>
