@@ -12,7 +12,6 @@ export class ChangePasswordPage  {
     public router:Router
   ) { }
 
-
 goBack(){
 this.router.navigateByUrl('forget-page');
 }
