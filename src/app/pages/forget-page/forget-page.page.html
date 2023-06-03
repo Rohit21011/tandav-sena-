@@ -29,20 +29,7 @@
       <ion-input label="Outline input" class="Referral" ></ion-input>
     </ion-item>
 
-    <ion-row style="width: 334px;margin-top: 15px;">
-      <ion-col>
-        <ion-button shape="round" color="dark"  class="optButton" type="submit">Get OTP</ion-button>
-        <!-- <ion-button  class="optButton" type="submit"  >Get OTP</ion-button> -->
-      </ion-col>
-      <ion-col style="display: flex;">
-        <ion-input type="number" label="Outline input" #otp1  maxlength="1" size="1" (keyup)="next(otp2)" class="otpBox" ></ion-input>
-        <ion-input type="number" label="Outline input" #otp2  maxlength="1" size="1" (keyup)="next(otp3)" class="otpBox" ></ion-input>
-        <ion-input type="number" label="Outline input" #otp3  maxlength="1" size="1" (keyup)="next(otp4)" class="otpBox" ></ion-input>
-        <ion-input type="number" label="Outline input" #otp4  maxlength="1" size="1" (keyup)="next(otp5)" class="otpBox" ></ion-input>
-        <ion-input type="number" label="Outline input" #otp5  maxlength="1" size="1" (keyup)="next(otp6)" class="otpBox"></ion-input>
-
-      </ion-col>
-    </ion-row>
+    <app-get-otp></app-get-otp>
 
       <ion-item style="margin-top:10px;">
         <ion-label position="stacked" color="primary">New Password</ion-label>

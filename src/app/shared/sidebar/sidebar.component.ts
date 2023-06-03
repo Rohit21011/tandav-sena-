@@ -8,56 +8,24 @@ import { StatusBar } from '@capacitor/status-bar';
 import { SplashScreen } from '@capacitor/splash-screen';
 
 import { Storage } from '@ionic/storage';
-
-import { UserData } from './providers/user-data';
+import { UserData } from '../../providers/user-data';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css']
 })
-export class AppComponent implements OnInit {
+export class SidebarComponent implements OnInit {
   appPages = [
     {
-      title: 'About Us',
-      url: '/about',
-      icon: 'information-circle'
+      title: 'Profile',
+      url: '/app/tabs/about',
+      icon: 'people'
     },
     {
-      title: 'Refer & Earn',
-      url: '/refer',
-      icon: 'link'
-    },
-    {
-      title: 'My Events',
-      url: '/events',
-      icon: 'volume-medium'
-    },
-    {
-      title: 'My Rewards',
-      url: '/rewards',
-      icon: 'gift'
-    },
-    {
-      title: 'My KYC details',
-      url: '/kyc',
-      icon: 'clipboard'
-    },
-    {
-      title: 'Change password',
-      url: '/change-password',
-      icon: 'lock-closed'
-    },
-    {
-      title: 'Policy',
-      url: '/policy',
-      icon: 'shield-half'
-    },
-    {
-      title: 'Legality',
-      url: '/legality',
-      icon: 'hammer'
+      title: 'Events',
+      url: '/app/tabs/schedule',
+      icon: 'calendar'
     },
 
   ];

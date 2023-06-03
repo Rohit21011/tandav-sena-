@@ -1,0 +1,19 @@
+.optButton{
+    color: #FFFFFF;
+    text-transform: none;
+    font-size: 12px;
+    line-height: 18px;
+    width: 80px;
+    height: 34px;
+    
+    --border-radius: 20px !important;
+  }
+  .otpBox{
+    background: #F8F8F8;
+    width: 29px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 10px;
+    border-bottom: 2px solid #FF8015;
+  }
+  

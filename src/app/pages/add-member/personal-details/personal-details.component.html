@@ -1,0 +1,66 @@
+<form [formGroup]="memberService?.addMemberForm" class="form-layout" >
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked" color="primary" >Name</ion-label>
+
+      <ion-input  formControlName="name"  type="text" placeholder="Enter your Full Name "  spellcheck="false" autocapitalize="off">
+        <ion-icon  name="people-outline"></ion-icon>
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary" >Email Id</ion-label>
+
+      <ion-input  formControlName="email" name="email" type="text" placeholder="Enter your Email Name  "  spellcheck="false" autocapitalize="off"
+        >
+        <ion-icon name="mail-open-outline"></ion-icon>
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary"> Date Of Birth </ion-label>
+      <ion-input formControlName="dateofBirth"  type="date" placeholder="Enter your Birthdate "  >
+        <ion-icon name="cash-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary">Gender</ion-label>
+        <ion-select formControlName="gender"  placeholder="Select Gender">
+          <ion-select-option value="male">Male</ion-select-option>
+          <ion-select-option value="female">Female</ion-select-option>
+          <ion-select-option value="other">Other</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary">Marital Status  </ion-label>
+      <ion-select formControlName="maritalStatus" placeholder="Select Marital Status">
+        <ion-select-option value="single">Single</ion-select-option>
+        <ion-select-option value="married">Married</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" color="primary">Mobile No  </ion-label>
+      <ion-input  formControlName="mobileNo"  type="text" >
+        <ion-icon name="call-outline"></ion-icon>
+       </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary">Alternate No  </ion-label>
+      <ion-input  formControlName="alterneteMobileNo" type="text" >
+        <ion-icon name="call-outline"></ion-icon>      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" color="primary">Blood Group</ion-label>
+      <ion-input  formControlName="bloodGroup" type="text" placeholder="Enter your Confirmed Password"  >
+        <ion-icon name="egg-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</form>

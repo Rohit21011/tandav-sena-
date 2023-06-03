@@ -1,0 +1,59 @@
+<form [formGroup]="memberService?.addMemberForm" class="form-layout" >
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked" color="primary" >Qualification</ion-label>
+
+      <ion-input  formControlName="qualification"  type="text" placeholder="Enter your Qualification"  spellcheck="false" autocapitalize="off">
+        <ion-icon  name="book-outline"></ion-icon>
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary" >Occupation</ion-label>
+
+      <ion-input  formControlName="occupation" name="email" type="text" placeholder="Enter your Occupation"  spellcheck="false" autocapitalize="off">
+        <ion-icon  name="briefcase-outline"></ion-icon>
+       </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="primary"> Residential Address </ion-label>
+      <ion-input formControlName="address"  type="text" placeholder="Enter your Address "  >
+        <ion-icon  name="home-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+<div style="display:flex;flex-direction: row;width: 270px;">
+
+    <ion-item>
+      <ion-label position="stacked" color="primary">Skills</ion-label>
+      <ion-input  formControlName="skills"  type="text" >
+        <ion-icon  name="bar-chart-outline"></ion-icon>
+       </ion-input>
+    </ion-item>
+
+    <ion-item style="margin-left:25px;">
+      <ion-label position="stacked" color="primary">Hobby</ion-label>
+      <ion-input  formControlName="hobby" type="text" >
+        <ion-icon  name="layers-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    </div>
+    <ion-item>
+      <ion-label position="stacked" color="primary">Upload Your Signature</ion-label>
+      <ion-input  formControlName="signature" type="file" >
+        <ion-icon name="cloud-upload-outline"></ion-icon>
+           </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" color="primary">Moto to join Shiv Tandav Sena</ion-label>
+      <ion-input  formControlName="motoToJoin" type="text" placeholder="Enter your Confirmed Password"  >
+        <ion-icon name="egg-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</form>

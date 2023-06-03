@@ -1,0 +1,33 @@
+
+<app-header headerName="Add Member"></app-header>
+
+<ion-content class="container">
+  <img src="../../../assets/img/vector-png/background.png" style="width: 100%;"  alt="">
+<div class="background">
+  <div class="button-row">
+   <button class="scroll-btn" (click)="onStepClick(1)"><ion-icon name="id-card-outline"></ion-icon>Personal Details</button>
+   <button class="scroll-btn" (click)="onStepClick(2)"><ion-icon name="business-outline"></ion-icon>professional Details</button>
+   <button class="scroll-btn" (click)="onStepClick(3)"><ion-icon name="id-card-outline"></ion-icon>Family Details</button>
+   <button class="scroll-btn" (click)="onStepClick(4)"><ion-icon name="document-lock-outline"></ion-icon>KYC</button>
+   <button class="scroll-btn" (click)="onStepClick(5)"><ion-icon name="medal-outline"></ion-icon>Membership</button>
+  </div>
+    <div class="slider-container">
+    <div class="slider-line" ></div>
+    <div class="slider-progress" [ngStyle]="{'width':currentStep===1? '25%':
+    currentStep===2? '50%':
+    currentStep===3? '75%':
+    currentStep===4? '100%':'0%' }"></div>
+  </div>
+  <app-personal-details *ngIf="currentStep===1"></app-personal-details>
+  <app-professional-details *ngIf="currentStep===2"></app-professional-details>
+  <app-family-details *ngIf="currentStep===3"></app-family-details>
+  <app-kyc *ngIf="currentStep===4"></app-kyc>
+  <ion-item>
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>term And conditions</ion-label>
+  </ion-item>
+  <ion-button  type="submit" class="submit" (click)="submit()" expand="block">Submit</ion-button>
+</div>
+
+
+</ion-content>

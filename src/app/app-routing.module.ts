@@ -32,7 +32,8 @@ const routes: Routes = [
     path: 'tutorial',
     loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialModule),
     canLoad: [CheckTutorial]
-  },  {
+  },
+  {
     path: 'forget-page',
     loadChildren: () => import('./pages/forget-page/forget-page.module').then( m => m.ForgetPagePageModule)
   },
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'add-member',
+    loadChildren: () => import('./pages/add-member/add-member.module').then( m => m.AddMemberPageModule)
   }
 
 ];

@@ -1,0 +1,36 @@
+
+
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleSidebar()">
+        <ion-menu-button></ion-menu-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ headerName }}</ion-title>
+    <ion-buttons slot="end">
+      <ng-container >
+        <ion-button (click)="performSearch()">
+          <ion-icon name="search"></ion-icon>
+        </ion-button>
+      </ng-container>
+      <ng-container >
+        <ion-button (click)="openNotifications()">
+          <ion-icon name="notifications"></ion-icon>
+        </ion-button>
+      </ng-container>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+<ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+  <ion-title >{{headerName}}</ion-title>
+  <div class="icon-size"style="display:flex;padding-right: 10px;">
+    <ion-icon style="padding-right: 20px;" name="search" (click)="performSearch()"></ion-icon>
+    <ion-icon name="notifications" (click)="openNotifications()"></ion-icon>
+  </div>
+
+</ion-buttons>
