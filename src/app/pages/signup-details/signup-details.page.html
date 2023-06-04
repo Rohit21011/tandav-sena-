@@ -1,6 +1,6 @@
 
 <ion-buttons slot="start">
-  <ion-menu-button></ion-menu-button>
+  <!-- <ion-menu-button></ion-menu-button> -->
   <ion-title >शिव तांडव सेना</ion-title>
 </ion-buttons>
 
@@ -64,7 +64,7 @@
     </ion-list>
 
   </form>
-  <ion-button  type="submit" class="submit" expand="block">Submit</ion-button>
+  <ion-button  type="submit" class="submit" (click)="signup()" expand="block">Submit</ion-button>
   <ion-row class="newUser">
     <p style="color: #303030;">Already have account ? <span (click)="signIn()" style="color:#FF8015">Sign in</span></p>
   </ion-row>

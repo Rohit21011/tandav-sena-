@@ -11,5 +11,10 @@ export class KycComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  // const Icon=document.getElementById("fileIcon");
+  // Icon.click = () => {
+  //   this.file.click();
+  // }
 
 }

@@ -15,4 +15,7 @@ export class SignupDetailsPage  {
 signIn(){
 this.router.navigateByUrl('/login');
 }
+signup(){
+  this.router.navigateByUrl('/dashboard');
+}
 }

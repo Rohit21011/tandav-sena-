@@ -1,10 +1,10 @@
 
-<ion-row style="width: 304px;margin-top: 15px;margin-left: -8px;">
+<ion-row style="max-width: 330px;margin-top: 15px;">
     <ion-col>
       <ion-button shape="round" color="dark"  class="optButton" type="submit">Get OTP</ion-button>
       <!-- <ion-button  class="optButton" type="submit"  >Get OTP</ion-button> -->
     </ion-col>
-    <ion-col style="display: flex;">
+    <ion-col style="display: flex;margin: auto auto auto 2px;">
       <ion-input type="number" label="Outline input" #otp1  maxlength="1" size="1" (keyup)="next(otp2)" class="otpBox" ></ion-input>
       <ion-input type="number" label="Outline input" #otp2  maxlength="1" size="1" (keyup)="next(otp3)" class="otpBox" ></ion-input>
       <ion-input type="number" label="Outline input" #otp3  maxlength="1" size="1" (keyup)="next(otp4)" class="otpBox" ></ion-input>

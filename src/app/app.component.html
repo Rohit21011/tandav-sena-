@@ -29,8 +29,10 @@
             </ion-item>
 
           </ion-menu-toggle>
-          <ion-button  class="logout">Log Out</ion-button>
-
+          <ion-menu-toggle autoHide="false">
+            <ion-button  class="logout" (click)="logout()">Log Out</ion-button>
+          </ion-menu-toggle>
+ 
       </ion-content>
     </ion-menu>
 

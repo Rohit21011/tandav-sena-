@@ -8,12 +8,27 @@
     
     --border-radius: 20px !important;
   }
+
+  /* .optButton{
+    color: #FFFFFF;
+    text-transform: none;
+    font-size: 12px;
+  line-height: 18px;
+  } */
+  /* .otpBox{
+    background: #F8F8F8;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    margin-right: 8px;
+    border-bottom: 2px solid #FF8015;
+  } */
   .otpBox{
     background: #F8F8F8;
     width: 29px;
-    height: 30px;
+    height: 29px;
     border-radius: 3px;
-    margin-right: 10px;
+    margin: auto 10px auto auto;
     border-bottom: 2px solid #FF8015;
   }
   

@@ -32,21 +32,8 @@
     </ion-item>
 
     </ion-list>
-    <ion-row style="width: 334px;">
-      <ion-col>
-        <ion-button shape="round" color="dark"  class="optButton" type="submit">Get OTP</ion-button>
-        <!-- <ion-button  class="optButton" type="submit"  >Get OTP</ion-button> -->
-      </ion-col>
-      <ion-col style="display: flex;">
-        <ion-input label="Outline input" #otp1 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp2)" class="otpBox" ></ion-input>
-        <ion-input label="Outline input" #otp2 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp3)" class="otpBox" ></ion-input>
-        <ion-input label="Outline input" #otp3 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp4)" class="otpBox" ></ion-input>
-        <ion-input label="Outline input" #otp4 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp5)" class="otpBox" ></ion-input>
-        <ion-input label="Outline input" #otp5 pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp6)" class="otpBox" ></ion-input>
-
-      </ion-col>
-    </ion-row>
-
+   
+<app-get-otp></app-get-otp>
       <ion-button #otp6 type="submit" class="submit" expand="block">Submit</ion-button>
       <ion-row class="newUser">
         <p style="color:black;">Already have account ?  <span (click)="signIn()" style="color:#FF8015">Sign in</span></p>

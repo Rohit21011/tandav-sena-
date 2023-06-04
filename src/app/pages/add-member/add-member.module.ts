@@ -13,6 +13,7 @@ import { PersonalDetailsComponent } from './personal-details/personal-details.co
 import { ProfessionalDetailsComponent } from './professional-details/professional-details.component';
 import { MemberService } from './member.service';
 import { KycComponent } from './kyc/kyc.component';
+import { MembershipComponent } from './membership/membership.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { KycComponent } from './kyc/kyc.component';
     SharedModule,
     AddMemberPageRoutingModule
   ],
-  declarations: [AddMemberPage,FamilyDetailsComponent,PersonalDetailsComponent,ProfessionalDetailsComponent,KycComponent],
+  declarations: [AddMemberPage,FamilyDetailsComponent,PersonalDetailsComponent,ProfessionalDetailsComponent,KycComponent,MembershipComponent],
 
   providers:[MemberService]
 })

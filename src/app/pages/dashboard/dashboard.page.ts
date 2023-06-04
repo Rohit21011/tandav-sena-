@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,14 @@ export class DashboardPage {
     initialSlide: 0,
     speed: 100,
   };
-  constructor() { }
+  
+  constructor(
+    public router: Router
+  ) { }
+  addMember(){
+    
+    this.router.navigateByUrl('/add-member');
+  }
 
 
 

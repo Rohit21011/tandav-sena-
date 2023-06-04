@@ -5,12 +5,15 @@ import { IonicModule } from '@ionic/angular';
 
 import { SignupPage } from './signup';
 import { SignupPageRoutingModule } from './signup-routing.module';
+import { GetOtpComponent } from '../../shared/get-otp/get-otp.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     SignupPageRoutingModule
   ],
   declarations: [
