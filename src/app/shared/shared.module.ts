@@ -7,6 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GetOtpComponent } from './get-otp/get-otp.component';
+import { ButtonComponent } from './button/button.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   imports: [
@@ -14,7 +16,7 @@ import { GetOtpComponent } from './get-otp/get-otp.component';
     IonicModule.forRoot(),
     FormsModule,ReactiveFormsModule
   ],
-  declarations: [SharedComponent,HeaderComponent,SidebarComponent,FooterComponent, GetOtpComponent],
-  exports:[SharedComponent,HeaderComponent,SidebarComponent,FooterComponent,IonicModule,ReactiveFormsModule,GetOtpComponent]
+  declarations: [SharedComponent,HeaderComponent,SidebarComponent,FooterComponent, GetOtpComponent, ButtonComponent, SliderComponent],
+  exports:[SharedComponent,HeaderComponent,SidebarComponent,FooterComponent,IonicModule,ReactiveFormsModule,GetOtpComponent,ButtonComponent,SliderComponent]
 })
 export class SharedModule { }

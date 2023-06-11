@@ -1,10 +1,10 @@
 <form [formGroup]="memberService?.addMemberForm" class="form-layout" novalidate>
-  <div formArrayName="members">
+  <div formArrayName="members" style="margin-top: 40px;">
   <ion-list *ngFor="let member of memberService?.addMemberForm.get('members').controls; let i = index" [formGroupName]="i">
     <ion-icon name="trash-outline" *ngIf="i>0" (click)="memberService?.deleteMember(i)"></ion-icon>
     <ion-item>
       <!-- <ion-label position="stacked">Name:</ion-label> -->
-      <ion-input style="border:none"  placeholder="Name" formControlName="name" aria-placeholder="Name" type="text"   spellcheck="false" autocapitalize="off"
+      <ion-input   placeholder="Name" formControlName="name" aria-placeholder="Name" type="text"   spellcheck="false" autocapitalize="off"
         required>
       </ion-input>
 
@@ -32,5 +32,5 @@
 
   </ion-list>
   </div>
-  <div style="text-align: center" (click)="memberService?.addMember()">+ Add More</div>
+  <div style="text-align: center;margin:40px" (click)="memberService?.addMember()">+ Add More</div>
 </form>

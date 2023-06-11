@@ -137,6 +137,7 @@ export class AppComponent implements OnInit {
   }
 
   logout() {
+    
     this.router.navigateByUrl('/');
     // this.userData.logout().then(() => {
     //   return 

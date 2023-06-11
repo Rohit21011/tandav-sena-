@@ -1,0 +1,14 @@
+.logout{
+    text-transform: none;
+    --border-radius: 20px !important;
+    font-weight: 700;
+    font-size: 18px;
+    width: 135px;
+    height: 45px;
+    color: #FFFFFF;
+    position: relative;
+    top: 0px;
+    left: 17px;
+    line-height: 21px;
+    --background: linear-gradient(180deg, #4CDC19 0%, #2A9C01 100%);
+  }

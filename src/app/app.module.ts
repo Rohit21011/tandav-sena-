@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
+import { SharedComponent } from './shared/shared.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   imports: [
@@ -17,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    SharedModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
