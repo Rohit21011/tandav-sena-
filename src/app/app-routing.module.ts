@@ -52,7 +52,25 @@ const routes: Routes = [
   {
     path: 'add-member',
     loadChildren: () => import('./pages/add-member/add-member.module').then( m => m.AddMemberPageModule)
-  }
+  },
+  {
+    path: 'donation',
+    loadChildren: () => import('./pages/donation/donation.module').then( m => m.DonationPageModule)
+  },
+  {
+    path: 'online-donation',
+    loadChildren: () => import('./pages/donation/online-donation/online-donation.module').then( m => m.OnlineDonationPageModule)
+  },
+  {
+    path: 'offline-donation',
+    loadChildren: () => import('./pages/donation/offline-donation/offline-donation.module').then( m => m.OfflineDonationPageModule)
+  },
+
+
+
+  
+  
+
 
 ];
 

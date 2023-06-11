@@ -1,0 +1,49 @@
+<app-header headerName="Donation"></app-header>
+
+<ion-content>
+  <img src="../../../assets/img/vector-png/background.png" style="width: 100%;"  alt="">
+
+  <div class="background">
+      <img src="../../../assets/img/vector-png/children.png" style="width: 100%;"  alt="">
+
+    <form #loginForm="ngForm" class="form-layout" style="margin-top: 30px;" novalidate>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked" color="primary" >Name</ion-label>
+  
+          <ion-input   name="username" type="text" placeholder="Enter your Name "  spellcheck="false" autocapitalize="off"
+            required>
+            <ion-icon name="person-outline"></ion-icon>
+          </ion-input>
+  
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="stacked" color="primary"> E-mail Id </ion-label>
+          <ion-input  name="email" type="password" placeholder="Enter your Mail Id "  required>
+            <ion-icon name="lock-closed-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="stacked" color="primary"> Amount </ion-label>
+          <ion-input  name="number" type="number" placeholder="Enter Amount"  required>
+            <ion-icon name="cash-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+  
+      </ion-list>
+      <ion-button (click)="payOnline()" type="submit" class="submit"  expand="block">Pay</ion-button>
+
+      <ion-item style="--border-style:none;margin-top: 30px;">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>term And conditions</ion-label>
+      </ion-item>
+      <div class="offline-payment">
+        <p>Facing issue with online payment?</p>
+        <p (click)="payOffline()">Pay offline here</p>
+      </div>
+      
+    </form>
+</div>
+</ion-content>

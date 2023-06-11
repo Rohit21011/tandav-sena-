@@ -6,3 +6,7 @@ ion-input{
 :host(.item-native){
     border:none ;
 }
+ion-item{
+    margin-top: 20px;
+    --border-style: none !important;
+}

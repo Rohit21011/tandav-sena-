@@ -1,0 +1,83 @@
+<app-header headerName="Donation"></app-header>
+
+<ion-content>
+  <img src="../../../assets/img/vector-png/background.png" style="width: 100%;"  alt="">
+
+  <div class="background">
+    
+    
+    <form #loginForm="ngForm" class="form-layout" style="margin-top: 30px;" novalidate>
+      <div style="display: flex;justify-content: center;">
+        <img src="../../../assets/img/vector-png/QRcode.png" width="100px" alt="">
+
+      </div>
+      
+      <ion-list>
+        <ion-item style="--border-style:none">
+          <ion-label position="stacked" color="primary" >Gpay/Phone Pay/Paytm No.</ion-label>
+  
+          <ion-input  disabled name="username" type="number" placeholder="Enter your Name " value="8446352869"  spellcheck="false" autocapitalize="off"
+            required>
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-input>
+  
+        </ion-item>
+
+        <ion-item style="--border-style:none">
+          <ion-label position="stacked" color="primary" >UPI Id</ion-label>
+  
+          <ion-input  disabled name="username" type="text" placeholder="Enter your Name " value="8446352869@tyg"  spellcheck="false" autocapitalize="off"
+            required>
+            <ion-icon name="logo-paypal"></ion-icon>
+          </ion-input>
+  
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked" color="primary" >Name</ion-label>
+  
+          <ion-input   name="username" type="text" placeholder="Enter your Name "  spellcheck="false" autocapitalize="off"
+            required>
+            <ion-icon name="person-outline"></ion-icon>
+          </ion-input>
+  
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="stacked" color="primary"> E-mail Id </ion-label>
+          <ion-input  name="email" type="password" placeholder="Enter your Mail Id "  required>
+            <ion-icon name="lock-closed-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="stacked" color="primary"> Amount </ion-label>
+          <ion-input  name="number" type="number" placeholder="Enter Amount"  required>
+            <ion-icon name="cash-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" color="primary">Upload Screenshot</ion-label>
+          <ion-input  formControlName="signature" type="file" >
+            <ion-icon name="cloud-upload-outline"></ion-icon>
+               </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked" color="primary">Transaction ID</ion-label>
+          <ion-input  name="number" type="number" placeholder="Enter your transaction Id"  required>
+            <ion-icon name="card-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-item style="--border-style:none;">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>term And conditions</ion-label>
+      </ion-item>
+      <ion-button type="submit" class="submit" style="margin-top: 20px;margin-bottom: 70px;"  expand="block">Submit</ion-button>
+
+      
+    </form>
+</div>
+</ion-content>

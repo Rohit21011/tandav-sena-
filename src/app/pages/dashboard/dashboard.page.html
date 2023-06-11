@@ -12,20 +12,12 @@
 <ion-content class="container">
   <img src="../../../assets/img/vector-png/background.png" style="width: 100%;"  alt="">
 <div class="background">
-  <div class="button-row">
-   <button class="scroll-btn" (click)="addMember()"><ion-icon name="person-add-sharp"></ion-icon>Become a Member</button>
-   <button class="scroll-btn"><ion-icon name="people-sharp"></ion-icon>Consult</button>
-   <button class="scroll-btn"><ion-icon name="alert-circle"></ion-icon>Raise a Complaint</button>
-   <button class="scroll-btn"><ion-icon name="trending-up-sharp"></ion-icon>Regular Donations</button>
-   <button class="scroll-btn"><ion-icon name="cash-sharp"></ion-icon>Relief Fund</button>
-   <button class="scroll-btn"><ion-icon name="heart-circle-sharp"></ion-icon>Special Fund</button>
-
-  </div>
+ <app-slider></app-slider>
   <div style="margin-top: 20px;">
     <img src="../../../assets/img/vector-png/children day.png" alt="">
   </div>
   <div class="members-info">
-    <div class="center-items">
+    <div class="center-items" style="line-height: 2;">
       <div></div>
       <span >20</span>
       <p>Visitors</p>
@@ -93,7 +85,7 @@
     </ion-card>
   </ion-slide>
 </ion-slides>
-<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+<ion-fab slot="fixed" style="bottom: 70px;" vertical="bottom" horizontal="end">
   <ion-fab-button>
     <img src="../../../assets/img/vector-png/donation.png" width="22px" style="margin-top: -12px;" alt="">
     <span style="position: absolute;top: 35px;font-size:  9.51848px;font-weight: 700;">Donate</span>
